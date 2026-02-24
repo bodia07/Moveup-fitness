@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoveUp — Fitness centrum pro ženy | Plzeň</title>
+  <meta name="description" content="Butikové fitness centrum pouze pro ženy v centru Plzně. Bezpečné a motivační prostředí, menší kapacita, osobní přístup." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- PROMO BAR -->
+  <div class="promo-bar" id="promoBar">
+    <span>🎓 Studentský tarif: měsíční členství jen za&nbsp;<strong>1&nbsp;245 Kč</strong> — ukaž ISIC a ušetři!</span>
+    <button class="promo-close" aria-label="Zavřít banner" id="promoClose">×</button>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo">Move<span>Up</span></a>
+      <nav class="nav-links" id="navLinks" aria-label="Hlavní navigace">
+        <a href="#home" class="nav-link">Domů</a>
+        <a href="#about" class="nav-link">O nás</a>
+        <a href="#services" class="nav-link">Služby</a>
+        <a href="#pricing" class="nav-link">Ceník</a>
+        <a href="#equipment" class="nav-link">Vybavení</a>
+        <a href="#team" class="nav-link">Trenérky</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#kontakt" class="nav-link">Kontakt</a>
+      </nav>
+      <a href="#kontakt" class="btn btn-accent nav-cta">Rezervovat vstup →</a>
+      <button class="hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <div class="hero-glow"></div>
+        <div class="hero-pattern">
+          <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="750" cy="120" r="180" fill="rgba(255,122,0,0.07)" />
+            <circle cx="800" cy="200" r="90" fill="rgba(255,122,0,0.06)" />
+            <circle cx="100" cy="500" r="200" fill="rgba(255,122,0,0.04)" />
+            <line x1="0" y1="0" x2="900" y2="600" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+            <line x1="900" y1="0" x2="0" y2="600" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+            <polygon points="700,50 850,130 780,280 630,280 560,130" fill="none" stroke="rgba(255,122,0,0.12)" stroke-width="1.5"/>
+          </svg>
+        </div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-tag">🏋️ Butikové fitness centrum · Plzeň</div>
+        <h1 class="hero-title">MoveUp —<br><span class="accent">posuň se výš,</span><br>každý den.</h1>
+        <p class="hero-sub">Fitness centrum pouze pro ženy v centru Plzně. Bezpečné a motivační prostředí, menší kapacita = větší komfort a skutečně osobní přístup. Tady se cítíš vítaná od první chvíle.</p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn btn-accent btn-lg">Rezervovat první návštěvu</a>
+          <a href="#pricing" class="btn btn-outline btn-lg">Zobrazit ceník</a>
+        </div>
+        <div class="hero-badges">
+          <div class="badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            centrum Plzně
+          </div>
+          <div class="badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/><circle cx="12" cy="14" r="2"/></svg>
+            vlastní parkování
+          </div>
+          <div class="badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+            online rezervace + vstup přes čip
+          </div>
+          <div class="badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            studentský tarif
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- O NÁS / VALUE PROPS -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-label">Proč MoveUp?</div>
+        <h2 class="section-title">Fitness s duší,<br>navržené <span class="accent">pro tebe</span></h2>
+        <p class="section-sub">Nejsme anonymní velké fitko. Jsme komunita žen, které se navzájem povzbuzují a posouvají.</p>
+        <div class="value-grid">
+          <div class="value-card">
+            <div class="value-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="24" cy="24" r="20" stroke="var(--accent)" stroke-width="2"/>
+                <path d="M16 24l5 5 11-11" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>100 % pro ženy</h3>
+            <p>Bez tlaku, bez hodnocení. Bezpečný prostor, kde se soustředíš jen na sebe a svůj pokrok.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="18" cy="20" r="6" stroke="var(--accent)" stroke-width="2"/>
+                <circle cx="30" cy="20" r="6" stroke="var(--accent)" stroke-width="2"/>
+                <path d="M8 36c0-5.523 4.477-10 10-10h12c5.523 0 10 4.477 10 10" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Menší kapacita = větší komfort</h3>
+            <p>Max. 30–40 osob naráz. Žádné čekání na stroje, vždy dostatek prostoru a klidu.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M24 8l4 8 9 1.5-6.5 6.3 1.5 9L24 28l-8 4.8 1.5-9L11 17.5 20 16z" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Osobní přístup + komunita</h3>
+            <p>Naše trenérky tě znají jménem. Pravidelné výzvy a skupinová podpora ti pomáhají vytrvat.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="10" y="10" width="28" height="28" rx="4" stroke="var(--accent)" stroke-width="2"/>
+                <path d="M16 24h16M24 16v16" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Moderní vybavení</h3>
+            <p>Profesionální stroje, cardio zóna, funkční prostor — vše udržované a čisté každý den.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="8" y="8" width="32" height="32" rx="4" stroke="var(--accent)" stroke-width="2"/>
+                <path d="M16 24h16M24 16v16" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="35" cy="13" r="5" fill="var(--accent)"/>
+              </svg>
+            </div>
+            <h3>Online rezervace + čip</h3>
+            <p>Zarezervuj hodinu z mobilu, vstup jednoduše přes čip — žádné čekání na recepci.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="8" y="16" width="32" height="24" rx="3" stroke="var(--accent)" stroke-width="2"/>
+                <path d="M16 16v-4a8 8 0 0 1 16 0v4" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="24" cy="28" r="3" fill="var(--accent)"/>
+              </svg>
+            </div>
+            <h3>Vlastní parkování</h3>
+            <p>Vyhrazená parkovací místa přímo u vstupu — přijď autem, bez starostí a bez hledání místa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLUŽBY -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-label">Co nabízíme</div>
+        <h2 class="section-title">Naše <span class="accent">služby</span></h2>
+        <p class="section-sub">Ať jsi začátečnice, maminka na mateřské nebo zaneprázdněná profesionálka — máme program přesně pro tebe.</p>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-num">01</div>
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="24" cy="24" r="18" stroke="var(--accent)" stroke-width="2"/>
+                <circle cx="16" cy="24" r="4" fill="var(--accent)" opacity=".3"/>
+                <circle cx="24" cy="16" r="4" fill="var(--accent)" opacity=".3"/>
+                <circle cx="32" cy="24" r="4" fill="var(--accent)" opacity=".3"/>
+                <circle cx="24" cy="32" r="4" fill="var(--accent)" opacity=".3"/>
+              </svg>
+            </div>
+            <h3>Kruhové tréninky</h3>
+            <p>Dynamické lekce střídající stanice — spalují, posilují a nikdy nenudí. Skvělé pro každou úroveň kondice.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-num">02</div>
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M10 38 L24 14 L38 38" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15 30h18" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Funkční tréninky</h3>
+            <p>Pohyby z každodenního života — posiluj svaly, zlepši stabilitu a předcházej zraněním. Trénuj chytře.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-num">03</div>
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <ellipse cx="24" cy="36" rx="14" ry="4" stroke="var(--accent)" stroke-width="1.5"/>
+                <path d="M24 36V20M17 26l7-6 7 6M10 20c4 0 8-4 14-4s10 4 14 4" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Jóga</h3>
+            <p>Klid, flexibilita a rovnováha mysli i těla. Vhodná pro úplné začátečnice i pokročilé praktikantky.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-num">04</div>
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <ellipse cx="24" cy="24" rx="16" ry="10" stroke="var(--accent)" stroke-width="2"/>
+                <path d="M24 14v20M14 24h20" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 3"/>
+              </svg>
+            </div>
+            <h3>Pilates</h3>
+            <p>Hluboké svaly, krásná postava a silný střed těla. Oblíbená metoda maminek i žen po zranění.</p>
+          </div>
+          <div class="service-card service-card--wide">
+            <div class="service-num">05</div>
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M8 30 Q24 10 40 30" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" fill="none"/>
+                <rect x="14" y="30" width="20" height="8" rx="2" stroke="var(--accent)" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>Relax zóna</h3>
+            <p>Strečink, pěnové válce, masážní pásy. Dopřej tělu zasloužený odpočinek a rychlejší regeneraci po tréninku. Protože péče o sebe je součást tréninku.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CENÍK -->
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <div class="section-label">Investice do sebe</div>
+        <h2 class="section-title">Transparentní <span class="accent">ceník</span></h2>
+        <p class="section-sub">Žádné skryté poplatky. Vybereš si členství, které ti sedí, a začínáš hned.</p>
+        <div class="pricing-grid">
+          <!-- DOSPĚLÍ -->
+          <div class="pricing-card">
+            <div class="pricing-badge-top">Dospělé</div>
+            <div class="pricing-rows">
+              <div class="pricing-row">
+                <div class="pricing-row-label">Jednorázový vstup</div>
+                <div class="pricing-row-price">170 Kč</div>
+              </div>
+              <div class="pricing-row pricing-row--highlight">
+                <div class="pricing-popular">⭐ Nejpopulárnější</div>
+                <div class="pricing-row-label">Měsíční členství</div>
+                <div class="pricing-row-price big">1&nbsp;445 Kč<span>/měs.</span></div>
+                <div class="pricing-row-note">Neomezené vstupy · 1 měsíc</div>
+              </div>
+              <div class="pricing-row">
+                <div class="pricing-row-label">Půlroční členství</div>
+                <div class="pricing-row-price">7&nbsp;100 Kč<span>/6 měs.</span></div>
+                <div class="pricing-row-note">Ušetříš 2 570 Kč oproti měsíčnímu</div>
+              </div>
+            </div>
+            <a href="#kontakt" class="btn btn-accent btn-block">Chci toto členství</a>
+          </div>
+          <!-- STUDENTKY -->
+          <div class="pricing-card pricing-card--student">
+            <div class="pricing-badge-top student">🎓 Studentky</div>
+            <div class="pricing-rows">
+              <div class="pricing-row">
+                <div class="pricing-row-label">Jednorázový vstup</div>
+                <div class="pricing-row-price">150 Kč</div>
+              </div>
+              <div class="pricing-row pricing-row--highlight">
+                <div class="pricing-popular">⭐ Nejpopulárnější</div>
+                <div class="pricing-row-label">Měsíční členství</div>
+                <div class="pricing-row-price big">1&nbsp;245 Kč<span>/měs.</span></div>
+                <div class="pricing-row-note">Neomezené vstupy · stačí ISIC</div>
+              </div>
+              <div class="pricing-row">
+                <div class="pricing-row-label">Půlroční členství</div>
+                <div class="pricing-row-price">6&nbsp;700 Kč<span>/6 měs.</span></div>
+                <div class="pricing-row-note">Ušetříš 2 770 Kč oproti měsíčnímu</div>
+              </div>
+            </div>
+            <a href="#kontakt" class="btn btn-accent btn-block">Chci toto členství</a>
+          </div>
+        </div>
+        <p class="pricing-note">* Studentský tarif je dostupný po předložení platné studentské karty (ISIC nebo školní průkaz). Všechny ceny jsou konečné, bez DPH.</p>
+      </div>
+    </section>
+
+    <!-- VYBAVENÍ -->
+    <section class="section equipment" id="equipment">
+      <div class="container">
+        <div class="section-label">Co tě čeká</div>
+        <h2 class="section-title">Naše <span class="accent">vybavení</span></h2>
+        <p class="section-sub">Profesionální stroje, čistota a prostor — vše, co potřebuješ pro efektivní trénink.</p>
+        <div class="tabs">
+          <div class="tab-buttons" role="tablist">
+            <button class="tab-btn active" data-tab="posilo" role="tab" aria-selected="true">Posilovací stroje</button>
+            <button class="tab-btn" data-tab="cardio" role="tab" aria-selected="false">Cardio zóna</button>
+            <button class="tab-btn" data-tab="vahy" role="tab" aria-selected="false">Volné váhy</button>
+            <button class="tab-btn" data-tab="funkce" role="tab" aria-selected="false">Funkční zóna</button>
+            <button class="tab-btn" data-tab="podlahy" role="tab" aria-selected="false">Podlahy & povrchy</button>
+            <button class="tab-btn" data-tab="relax" role="tab" aria-selected="false">Relax kout</button>
+          </div>
+          <div class="tab-content" id="tabContent">
+            <!-- filled by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRENÉRKY -->
+    <section class="section team" id="team">
+      <div class="container">
+        <div class="section-label">Váš tým</div>
+        <h2 class="section-title">Naše <span class="accent">trenérky</span></h2>
+        <p class="section-sub">Průvodkyně na tvé fitness cestě. Profesionálky s vášní pro pohyb a péči o ženy.</p>
+        <div class="team-grid" id="teamGrid">
+          <!-- filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="container faq-container">
+        <div class="faq-left">
+          <div class="section-label">Máš otázky?</div>
+          <h2 class="section-title">Nejčastější<br><span class="accent">dotazy</span></h2>
+          <p class="section-sub">Nenašla jsi odpověď? Napiš nám — rádi poradíme.</p>
+          <a href="#kontakt" class="btn btn-accent">Kontaktovat nás</a>
+        </div>
+        <div class="faq-right" id="faqList">
+          <!-- filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="section contact" id="kontakt">
+      <div class="container">
+        <div class="section-label">Pojď mezi nás</div>
+        <h2 class="section-title">Rezervuj si <span class="accent">první návštěvu</span></h2>
+        <p class="section-sub">Stačí vyplnit formulář a my se ti ozveme do 24 hodin s termínem a vším potřebným.</p>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              </div>
+              <div>
+                <div class="contact-item-label">Lokalita</div>
+                <div class="contact-item-val">Centrum Plzně<br><small>Přesná adresa bude doplněna</small></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+              </div>
+              <div>
+                <div class="contact-item-label">Telefon</div>
+                <div class="contact-item-val">+420 XXX XXX XXX</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="contact-item-label">E-mail</div>
+                <div class="contact-item-val">info@moveup-fitness.cz</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <div class="contact-item-label">Otevírací doba</div>
+                <div class="contact-item-val">Po–Pá: 06:00–22:00<br>So–Ne: 08:00–20:00</div>
+              </div>
+            </div>
+            <div class="map-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" width="32" height="32"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              <span>Mapa bude doplněna</span>
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="fname">Jméno a příjmení *</label>
+              <input type="text" id="fname" name="fname" placeholder="Jana Nováková" autocomplete="name" required />
+              <span class="form-error" id="fnameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="femail">E-mailová adresa *</label>
+              <input type="email" id="femail" name="femail" placeholder="jana@email.cz" autocomplete="email" required />
+              <span class="form-error" id="femailError"></span>
+            </div>
+            <div class="form-group">
+              <label for="fmsg">Zpráva / dotaz</label>
+              <textarea id="fmsg" name="fmsg" rows="5" placeholder="Chci se zapsat, mám zájem o..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-accent btn-block btn-lg">Odeslat zprávu →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="logo logo--footer">Move<span>Up</span></a>
+        <p>Butikové fitness centrum pro ženy v centru Plzně. Posuň se výš, každý den.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-title">Navigace</div>
+          <a href="#home">Domů</a>
+          <a href="#about">O nás</a>
+          <a href="#services">Služby</a>
+          <a href="#pricing">Ceník</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Více</div>
+          <a href="#equipment">Vybavení</a>
+          <a href="#team">Trenérky</a>
+          <a href="#faq">FAQ</a>
+          <a href="#kontakt">Kontakt</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> MoveUp Fitness s.r.o. · Všechna práva vyhrazena</p>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
