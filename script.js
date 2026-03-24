@@ -230,7 +230,7 @@ function renderEquipTab(key) {
     el.className = 'equip-item reveal';
     el.innerHTML = `
       <div class="equip-item-photo">
-        ${item.image ? `<img src="${item.image}" alt="${item.name}">` : `
+        ${item.img ? `<img src="${item.img}" alt="${item.name}">` : `
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
             <rect x="3" y="3" width="18" height="18" rx="3"/>
             <circle cx="8.5" cy="8.5" r="1.5"/>
