@@ -263,7 +263,7 @@ renderEquipTab('posilo');
 /* ─── TEAM ───────────────────────────────────────────────── */
 const teamGrid = document.getElementById('teamGrid');
 
-function renderTeamGroup(members, labelText) {
+function renderTeamGroup(members, labelText, memberType) {
   const label = document.createElement('div');
   label.className = 'team-section-label';
   label.textContent = labelText;
@@ -271,10 +271,12 @@ function renderTeamGroup(members, labelText) {
 
   const subgrid = document.createElement('div');
   subgrid.className = 'team-subgrid';
+
   members.forEach(member => {
     const card = document.createElement('div');
     card.className = 'team-card reveal';
     card.innerHTML = `
+      <div class="team-type">${memberType}</div>
       <div class="team-avatar">${member.initials}</div>
       <div class="team-name">${member.name}</div>
       <div class="team-role">${member.role}</div>
@@ -282,12 +284,12 @@ function renderTeamGroup(members, labelText) {
     `;
     subgrid.appendChild(card);
   });
+
   teamGrid.appendChild(subgrid);
 }
 
-renderTeamGroup(DATA.team.slice(0, 2), 'Trenérky');
-renderTeamGroup(DATA.team.slice(2), 'Asistentky');
-
+renderTeamGroup(DATA.team.slice(0, 2), 'Trenérky', 'Trenérka');
+renderTeamGroup(DATA.team.slice(2), 'Asistentky', 'Asistentka');
 /* ─── FAQ ACCORDION ──────────────────────────────────────── */
 const faqList = document.getElementById('faqList');
 
