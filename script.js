@@ -19,52 +19,52 @@ const DATA = {
       title: 'Cardio zóna',
       items: [
         { name: 'Běžecké pásy', desc: 'Prémiové pásy s tréninkovými programy a měřením tepu.', img: 'img/treadmill.jpg' },
-        { name: 'Eliptické trenažéry', desc: 'Kloubům šetrná náhrada běhu.', img: 'img/elliptical.jpg' },
-        { name: 'Rotopedy', desc: 'Klasický i spinningový typ pro variabilní trénink.', img: 'img/spinning bike.jpg' },
-        { name: 'Stair climber', desc: 'Chůze do schodů = efektivní spalování.', img: 'img/stair climber.jpg' },
-        { name: 'Veslařský trenažér', desc: 'Celotělové cardio s důrazem na záda.', img: 'img/rowing machine.jpg' },
+        { name: 'Eliptické trenažéry', desc: 'Kloubům šetrná náhrada běhu.', img: 'img/elliptical.webp' },
+        { name: 'Rotopedy', desc: 'Klasický i spinningový typ pro variabilní trénink.', img: 'img/spinningbike.jpeg' },
+        { name: 'Stair climber', desc: 'Chůze do schodů = efektivní spalování.', img: 'img/stairclimber.jpg' },
+        { name: 'Veslařský trenažér', desc: 'Celotělové cardio s důrazem na záda.', img: 'img/rowingmachine.jpg' },
       ]
     },
     vahy: {
       title: 'Volné váhy',
       items: [
         { name: 'Činky 1–30 kg', desc: 'Kompletní sada jednoruček na každé posilovací stojanu.', img: 'img/dumbbells.jpg' },
-        { name: 'Olympijská osa', desc: 'Bezpečnostní stojany pro bench press a dřepy.', img: 'img/olympic bar.jpg' },
-        { name: 'Kettlebells 4–32 kg', desc: 'Swing, turkish get-up a funkční pohyby.', img: 'img/kettlebells.jpg' },
-        { name: 'EZ a tricepsová tyč', desc: 'Izolace paží bez zatěžování zápěstí.', img: 'img/ez bar.jpg' },
-        { name: 'Bumper plates', desc: 'Barevné kotoučové závaží pro silové tréninky.', img: 'img/bumper plates.jpg' },
+        { name: 'Olympijská osa', desc: 'Bezpečnostní stojany pro bench press a dřepy.', img: 'img/olympicbar.jpeg' },
+        { name: 'Kettlebells 4–32 kg', desc: 'Swing, turkish get-up a funkční pohyby.', img: 'img/kettlebells.jpeg' },
+        { name: 'EZ a tricepsová tyč', desc: 'Izolace paží bez zatěžování zápěstí.', img: 'img/ezbar.jpg' },
+        { name: 'Bumper plates', desc: 'Barevné kotoučové závaží pro silové tréninky.', img: 'img/bumperplates.jpeg' },
       ]
     },
     funkce: {
       title: 'Funkční zóna',
       items: [
-        { name: 'TRX závěsný systém', desc: 'Posilování vlastní vahou v každé poloze.', img: 'trx.jpg' },
-        { name: 'BOSU balance trainer', desc: 'Stabilita, koordinace, core.', img: 'bosu.jpg' },
-        { name: 'Kettlebells', desc: 'Swing, snatch a celotělové okruhy.', img: 'kettlebells.jpg' },
-        { name: 'Odporové gumy (sady)', desc: 'Od lehkých po silné odpory pro každou skupinu svalů.', img: 'resistance bands.jpg' },
-        { name: 'Šplhací lano', desc: 'Silový výzev pro celé tělo.', img: 'rope.jpg' },
-        { name: 'Plyo boxy', desc: 'Výskoky, step-up a aerobní intervaly.', img: 'plyo boxes.jpg' },
-        { name: 'Slam balls & Medicine balls', desc: 'Explosivní trénink a rotace trupu.', img: 'slam balls.jpg' },
+        { name: 'TRX závěsný systém', desc: 'Posilování vlastní vahou v každé poloze.', img: 'img/trx.jpg' },
+        { name: 'BOSU balance trainer', desc: 'Stabilita, koordinace, core.', img: 'img/bosu.webp' },
+        { name: 'Kettlebells', desc: 'Swing, snatch a celotělové okruhy.', img: 'img/kettlebells.jpeg' },
+        { name: 'Odporové gumy (sady)', desc: 'Od lehkých po silné odpory pro každou skupinu svalů.', img: 'img/stretchingbands.webp' },
+        { name: 'Šplhací lano', desc: 'Silový výzev pro celé tělo.', img: 'img/rope.webp' },
+        { name: 'Plyo boxy', desc: 'Výskoky, step-up a aerobní intervaly.', img: 'img/plyoboxes.webp' },
+        { name: 'Slam balls & Medicine balls', desc: 'Explosivní trénink a rotace trupu.', img: 'img/slamballs.jpg' },
       ]
     },
     podlahy: {
       title: 'Podlahy & povrchy',
       items: [
-        { name: 'Pružná sportovní podlaha', desc: 'Tlumení dopadů, ochrana kloubů v celé ploše studia.', img: 'flexible floor.jpg' },
-        { name: 'Gumové podložky pod stroje', desc: 'Stabilita a ochrana podlahy.', img: 'rubber mats.jpg' },
-        { name: 'Koberec v relaxační zóně', desc: 'Měkký povrch pro strečink a jógu.', img: 'carpet.jpg' },
-        { name: 'Zrcadlová stěna', desc: 'Kontrola techniky a světlý vizuální dojem v celé hale.', img: 'mirror wall.jpg' },
+        { name: 'Pružná sportovní podlaha', desc: 'Tlumení dopadů, ochrana kloubů v celé ploše studia.', img: 'img/flexiblefloor.jpg' },
+        { name: 'Gumové podložky pod stroje', desc: 'Stabilita a ochrana podlahy.', img: 'img/rubbermats.jpg' },
+        { name: 'Koberec v relaxační zóně', desc: 'Měkký povrch pro strečink a jógu.', img: 'img/carpet.jpg' },
+        { name: 'Zrcadlová stěna', desc: 'Kontrola techniky a světlý vizuální dojem v celé hale.', img: 'img/mirrorwall.jpg' },
       ]
     },
     relax: {
       title: 'Relax kout',
       items: [
-        { name: 'Foam rollery', desc: 'Myofasciální uvolnění po tréninku.', img: 'foam roller.jpg' },
-        { name: 'Masážní míčky', desc: 'Cílená práce na trigger pointy.', img: 'massage balls.jpg' },
-        { name: 'Masážní pásová pistole', desc: 'Rychlá regenerace svalů.', img: 'massage gun.jpg' },
-        { name: 'Strečinkové gumy', desc: 'Hluboká flexibilita a cool-down.', img: 'stretching bands.jpg' },
-        { name: 'Jóga podložky', desc: 'Prémiové protiskluzové matky pro každou zákaznici.', img: 'yoga mats.jpg' },
-        { name: 'Odpočinkový kout', desc: 'Sedací vak a lehátko po tréninku.' },
+        { name: 'Foam rollery', desc: 'Myofasciální uvolnění po tréninku.', img: 'img/foamrollery.webp' },
+        { name: 'Masážní míčky', desc: 'Cílená práce na trigger pointy.', img: 'img/massageballs.png' },
+        { name: 'Masážní pásová pistole', desc: 'Rychlá regenerace svalů.', img: 'img/massagegun.webp' },
+        { name: 'Strečinkové gumy', desc: 'Hluboká flexibilita a cool-down.', img: 'img/stretchingbands.webp' },
+        { name: 'Jóga podložky', desc: 'Prémiové protiskluzové matky pro každou zákaznici.', img: 'img/yogamats.webp' },
+        { name: 'Odpočinkový kout', desc: 'Sedací vak a lehátko po tréninku.', img: 'img/relaxcorner.jpg' },
       ]
     }
   },
