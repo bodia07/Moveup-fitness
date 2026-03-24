@@ -1,6 +1,5 @@
 /* ─── DATA ─────────────────────────────────────────────── */
 const DATA = {
-
   /* EQUIPMENT TABS */
   equipment: {
     posilo: {
@@ -77,24 +76,28 @@ const DATA = {
       initials: 'TM',
       role: 'Funkční trénink & Silová příprava',
       bio: 'Certifikovaná trenérka s 8 lety zkušeností. Specializuje se na ženskou fyziologii a silový trénink pro začátečnice. Věří, že každá žena může být silnější, než si myslí.',
+      type: 'Trenérka'
     },
     {
       name: 'Klára Horáčková',
       initials: 'KH',
       role: 'Jóga & Mobilita',
       bio: 'Lektorka jógy s certifikátem 200h YTT. Vede skupinové i individuální lekce zaměřené na flexibilitu, dýchání a mentální pohodu. Tvoří bezpečný prostor pro každou ženu.',
+      type: 'Trenérka'
     },
     {
       name: 'Petra Šimánková',
       initials: 'PŠ',
       role: 'Pilates & Rehabilitační cvičení',
       bio: 'Diplomovaná fyzioterapeutka a lektorka pilates. Pomáhá ženám po zraněních, maminkám po porodu a všem, kteří hledají bezpečnou cestu zpět k pohybu.',
+      type: 'Asistentka'
     },
     {
       name: 'Michaela Dvořáčková',
       initials: 'MD',
       role: 'Kruhové tréninky & HIIT',
       bio: 'Energická trenérka, která tě postrčí tam, kde si říkáš "to nejde". Tvoří tréninky, při kterých se zasměješ, zpotíš a přijdeš příští den znovu.',
+      type: 'Asistentka'
     },
   ],
 
@@ -142,16 +145,17 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     const offset = 80;
     const top = target.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo({ top, behavior: 'smooth' });
-    // close mobile menu if open
     closeMobileMenu();
   });
 });
 
 /* ─── NAVBAR SCROLL ─────────────────────────────────────── */
 const navbar = document.getElementById('navbar');
+
 function handleNavScroll() {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
 }
+
 window.addEventListener('scroll', handleNavScroll, { passive: true });
 handleNavScroll();
 
@@ -186,7 +190,7 @@ hamburger.addEventListener('click', () => {
   const isOpen = hamburger.classList.toggle('open');
   hamburger.setAttribute('aria-expanded', String(isOpen));
   navLinksEl.classList.toggle('mobile-open', isOpen);
-  // Inject CTA into mobile menu if not there
+
   if (isOpen && !navLinksEl.querySelector('.nav-cta-mobile')) {
     const cta = document.createElement('a');
     cta.href = '#kontakt';
@@ -201,6 +205,7 @@ document.getElementById('promoClose').addEventListener('click', () => {
   const bar = document.getElementById('promoBar');
   bar.style.maxHeight = bar.offsetHeight + 'px';
   bar.style.transition = 'max-height 0.4s ease, opacity 0.3s ease, padding 0.4s ease';
+
   requestAnimationFrame(() => {
     bar.style.maxHeight = '0';
     bar.style.opacity = '0';
@@ -216,8 +221,10 @@ function renderEquipTab(key) {
   const data = DATA.equipment[key];
   const pane = document.createElement('div');
   pane.className = 'tab-pane';
+
   const grid = document.createElement('div');
   grid.className = 'equip-grid';
+
   data.items.forEach(item => {
     const el = document.createElement('div');
     el.className = 'equip-item reveal';
@@ -231,13 +238,15 @@ function renderEquipTab(key) {
         Foto brzy
       </div>
       <div class="equip-item-name">${item.name}</div>
-      <div class="equip-item-desc">${item.desc}</div>`;
+      <div class="equip-item-desc">${item.desc}</div>
+    `;
     grid.appendChild(el);
   });
+
   pane.appendChild(grid);
   tabContent.innerHTML = '';
   tabContent.appendChild(pane);
-  // trigger reveal
+
   requestAnimationFrame(() => {
     pane.querySelectorAll('.reveal').forEach((el, i) => {
       setTimeout(() => el.classList.add('visible'), i * 50);
@@ -251,45 +260,37 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
       b.classList.remove('active');
       b.setAttribute('aria-selected', 'false');
     });
+
     btn.classList.add('active');
     btn.setAttribute('aria-selected', 'true');
     renderEquipTab(btn.dataset.tab);
   });
 });
 
-// init first tab
 renderEquipTab('posilo');
 
 /* ─── TEAM ───────────────────────────────────────────────── */
 const teamGrid = document.getElementById('teamGrid');
 
-function renderTeamGroup(members, labelText, memberType) {
-  const label = document.createElement('div');
-  label.className = 'team-section-label';
-  label.textContent = labelText;
-  teamGrid.appendChild(label);
+function renderTeam() {
+  teamGrid.innerHTML = '';
 
-  const subgrid = document.createElement('div');
-  subgrid.className = 'team-subgrid';
-
-  members.forEach(member => {
+  DATA.team.forEach(member => {
     const card = document.createElement('div');
     card.className = 'team-card reveal';
     card.innerHTML = `
-      <div class="team-type">${memberType}</div>
+      <div class="team-type">${member.type}</div>
       <div class="team-avatar">${member.initials}</div>
       <div class="team-name">${member.name}</div>
       <div class="team-role">${member.role}</div>
       <div class="team-bio">${member.bio}</div>
     `;
-    subgrid.appendChild(card);
+    teamGrid.appendChild(card);
   });
-
-  teamGrid.appendChild(subgrid);
 }
 
-renderTeamGroup(DATA.team.slice(0, 2), 'Trenérky', 'Trenérka');
-renderTeamGroup(DATA.team.slice(2), 'Asistentky', 'Asistentka');
+renderTeam();
+
 /* ─── FAQ ACCORDION ──────────────────────────────────────── */
 const faqList = document.getElementById('faqList');
 
@@ -309,6 +310,7 @@ DATA.faq.forEach((item, i) => {
       <div class="faq-answer">${item.a}</div>
     </div>
   `;
+
   faqList.appendChild(el);
 
   const btn = el.querySelector('.faq-question');
@@ -317,13 +319,14 @@ DATA.faq.forEach((item, i) => {
 
   btn.addEventListener('click', () => {
     const isOpen = btn.classList.contains('open');
-    // close all
+
     document.querySelectorAll('.faq-question.open').forEach(openBtn => {
       openBtn.classList.remove('open');
       openBtn.setAttribute('aria-expanded', 'false');
       const w = openBtn.nextElementSibling;
       w.style.maxHeight = '0';
     });
+
     if (!isOpen) {
       btn.classList.add('open');
       btn.setAttribute('aria-expanded', 'true');
@@ -355,7 +358,6 @@ form.addEventListener('submit', e => {
   const femail = document.getElementById('femail');
   const femailErr = document.getElementById('femailError');
 
-  // name
   if (!fname.value.trim() || fname.value.trim().length < 2) {
     fnameErr.textContent = 'Zadej prosím své jméno (min. 2 znaky).';
     fname.classList.add('error');
@@ -365,7 +367,6 @@ form.addEventListener('submit', e => {
     fname.classList.remove('error');
   }
 
-  // email
   if (!validateEmail(femail.value.trim())) {
     femailErr.textContent = 'Zadej prosím platný e-mail.';
     femail.classList.add('error');
@@ -377,7 +378,6 @@ form.addEventListener('submit', e => {
 
   if (!valid) return;
 
-  // mock submission
   const btn = form.querySelector('button[type="submit"]');
   btn.textContent = 'Odesílám…';
   btn.disabled = true;
@@ -406,8 +406,8 @@ function observeReveal() {
   });
 }
 
-// Initial pass + after dynamic content
 observeReveal();
+
 const mutObs = new MutationObserver(observeReveal);
 mutObs.observe(document.body, { childList: true, subtree: true });
 
@@ -418,4 +418,5 @@ document.getElementById('year').textContent = new Date().getFullYear();
 document.querySelectorAll('.value-card, .service-card, .team-card, .pricing-card').forEach(el => {
   el.classList.add('reveal');
 });
+
 observeReveal();
