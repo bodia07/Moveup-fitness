@@ -5,65 +5,65 @@ const DATA = {
     posilo: {
       title: 'Posilovací stroje',
       items: [
-        { name: 'Leg press', desc: 'Bezpečné posilování nohou a hýždí.' },
-        { name: 'Leg curl / Leg extension', desc: 'Izolace hamstringů a kvadricepsů.' },
-        { name: 'Hip abductor / adductor', desc: 'Vnitřní a vnější strany stehen.' },
-        { name: 'Glute machine', desc: 'Cílené posilování hýžďových svalů.' },
-        { name: 'Seated row', desc: 'Posílení zad a zlepšení držení těla.' },
-        { name: 'Lat pulldown', desc: 'Široký úchop pro krásná záda.' },
-        { name: 'Ab crunch machine', desc: 'Přímý bříšní sval bez zatěžování krku.' },
-        { name: 'Cable crossover', desc: 'Multifunkční kabelový blok pro celé tělo.' },
+        { name: 'Leg press', desc: 'Bezpečné posilování nohou a hýždí.', img: 'img/legpress.png' },
+        { name: 'Leg curl / Leg extension', desc: 'Izolace hamstringů a kvadricepsů.', img: 'img/legcurl.jpg' },
+        { name: 'Hip abductor / adductor', desc: 'Vnitřní a vnější strany stehen.', img: 'img/hipabductor.jpg' },
+        { name: 'Glute machine', desc: 'Cílené posilování hýžďových svalů.', img: 'img/glutemachine.jpg' },
+        { name: 'Seated row', desc: 'Posílení zad a zlepšení držení těla.', img: 'img/seatedrow.jpg' },
+        { name: 'Lat pulldown', desc: 'Široký úchop pro krásná záda.', img: 'img/latpulldown.png' },
+        { name: 'Ab crunch machine', desc: 'Přímý bříšní sval bez zatěžování krku.', img: 'img/abcrunch.jpg' },
+        { name: 'Cable crossover', desc: 'Multifunkční kabelový blok pro celé tělo.', img: 'img/cablecrossover.jpg' },
       ]
     },
     cardio: {
       title: 'Cardio zóna',
       items: [
-        { name: 'Běžecké pásy', desc: 'Prémiové pásy s tréninkovými programy a měřením tepu.' },
-        { name: 'Eliptické trenažéry', desc: 'Kloubům šetrná náhrada běhu.' },
-        { name: 'Rotopedy', desc: 'Klasický i spinningový typ pro variabilní trénink.' },
-        { name: 'Stair climber', desc: 'Chůze do schodů = efektivní spalování.' },
-        { name: 'Veslařský trenažér', desc: 'Celotělové cardio s důrazem na záda.' },
+        { name: 'Běžecké pásy', desc: 'Prémiové pásy s tréninkovými programy a měřením tepu.', img: 'img/treadmill.jpg' },
+        { name: 'Eliptické trenažéry', desc: 'Kloubům šetrná náhrada běhu.', img: 'img/elliptical.jpg' },
+        { name: 'Rotopedy', desc: 'Klasický i spinningový typ pro variabilní trénink.', img: 'img/spinning bike.jpg' },
+        { name: 'Stair climber', desc: 'Chůze do schodů = efektivní spalování.', img: 'img/stair climber.jpg' },
+        { name: 'Veslařský trenažér', desc: 'Celotělové cardio s důrazem na záda.', img: 'img/rowing machine.jpg' },
       ]
     },
     vahy: {
       title: 'Volné váhy',
       items: [
-        { name: 'Činky 1–30 kg', desc: 'Kompletní sada jednoruček na každé posilovací stojanu.' },
-        { name: 'Olympijská osa', desc: 'Bezpečnostní stojany pro bench press a dřepy.' },
-        { name: 'Kettlebells 4–32 kg', desc: 'Swing, turkish get-up a funkční pohyby.' },
-        { name: 'EZ a tricepsová tyč', desc: 'Izolace paží bez zatěžování zápěstí.' },
-        { name: 'Bumper plates', desc: 'Barevné kotoučové závaží pro silové tréninky.' },
+        { name: 'Činky 1–30 kg', desc: 'Kompletní sada jednoruček na každé posilovací stojanu.', img: 'img/dumbbells.jpg' },
+        { name: 'Olympijská osa', desc: 'Bezpečnostní stojany pro bench press a dřepy.', img: 'img/olympic bar.jpg' },
+        { name: 'Kettlebells 4–32 kg', desc: 'Swing, turkish get-up a funkční pohyby.', img: 'img/kettlebells.jpg' },
+        { name: 'EZ a tricepsová tyč', desc: 'Izolace paží bez zatěžování zápěstí.', img: 'img/ez bar.jpg' },
+        { name: 'Bumper plates', desc: 'Barevné kotoučové závaží pro silové tréninky.', img: 'img/bumper plates.jpg' },
       ]
     },
     funkce: {
       title: 'Funkční zóna',
       items: [
-        { name: 'TRX závěsný systém', desc: 'Posilování vlastní vahou v každé poloze.' },
-        { name: 'BOSU balance trainer', desc: 'Stabilita, koordinace, core.' },
-        { name: 'Kettlebells', desc: 'Swing, snatch a celotělové okruhy.' },
-        { name: 'Odporové gumy (sady)', desc: 'Od lehkých po silné odpory pro každou skupinu svalů.' },
-        { name: 'Šplhací lano', desc: 'Silový výzev pro celé tělo.' },
-        { name: 'Plyo boxy', desc: 'Výskoky, step-up a aerobní intervaly.' },
-        { name: 'Slam balls & Medicine balls', desc: 'Explosivní trénink a rotace trupu.' },
+        { name: 'TRX závěsný systém', desc: 'Posilování vlastní vahou v každé poloze.', img: 'trx.jpg' },
+        { name: 'BOSU balance trainer', desc: 'Stabilita, koordinace, core.', img: 'bosu.jpg' },
+        { name: 'Kettlebells', desc: 'Swing, snatch a celotělové okruhy.', img: 'kettlebells.jpg' },
+        { name: 'Odporové gumy (sady)', desc: 'Od lehkých po silné odpory pro každou skupinu svalů.', img: 'resistance bands.jpg' },
+        { name: 'Šplhací lano', desc: 'Silový výzev pro celé tělo.', img: 'rope.jpg' },
+        { name: 'Plyo boxy', desc: 'Výskoky, step-up a aerobní intervaly.', img: 'plyo boxes.jpg' },
+        { name: 'Slam balls & Medicine balls', desc: 'Explosivní trénink a rotace trupu.', img: 'slam balls.jpg' },
       ]
     },
     podlahy: {
       title: 'Podlahy & povrchy',
       items: [
-        { name: 'Pružná sportovní podlaha', desc: 'Tlumení dopadů, ochrana kloubů v celé ploše studia.' },
-        { name: 'Gumové podložky pod stroje', desc: 'Stabilita a ochrana podlahy.' },
-        { name: 'Koberec v relaxační zóně', desc: 'Měkký povrch pro strečink a jógu.' },
-        { name: 'Zrcadlová stěna', desc: 'Kontrola techniky a světlý vizuální dojem v celé hale.' },
+        { name: 'Pružná sportovní podlaha', desc: 'Tlumení dopadů, ochrana kloubů v celé ploše studia.', img: 'flexible floor.jpg' },
+        { name: 'Gumové podložky pod stroje', desc: 'Stabilita a ochrana podlahy.', img: 'rubber mats.jpg' },
+        { name: 'Koberec v relaxační zóně', desc: 'Měkký povrch pro strečink a jógu.', img: 'carpet.jpg' },
+        { name: 'Zrcadlová stěna', desc: 'Kontrola techniky a světlý vizuální dojem v celé hale.', img: 'mirror wall.jpg' },
       ]
     },
     relax: {
       title: 'Relax kout',
       items: [
-        { name: 'Foam rollery', desc: 'Myofasciální uvolnění po tréninku.' },
-        { name: 'Masážní míčky', desc: 'Cílená práce na trigger pointy.' },
-        { name: 'Masážní pásová pistole', desc: 'Rychlá regenerace svalů.' },
-        { name: 'Strečinkové gumy', desc: 'Hluboká flexibilita a cool-down.' },
-        { name: 'Jóga podložky', desc: 'Prémiové protiskluzové matky pro každou zákaznici.' },
+        { name: 'Foam rollery', desc: 'Myofasciální uvolnění po tréninku.', img: 'foam roller.jpg' },
+        { name: 'Masážní míčky', desc: 'Cílená práce na trigger pointy.', img: 'massage balls.jpg' },
+        { name: 'Masážní pásová pistole', desc: 'Rychlá regenerace svalů.', img: 'massage gun.jpg' },
+        { name: 'Strečinkové gumy', desc: 'Hluboká flexibilita a cool-down.', img: 'stretching bands.jpg' },
+        { name: 'Jóga podložky', desc: 'Prémiové protiskluzové matky pro každou zákaznici.', img: 'yoga mats.jpg' },
         { name: 'Odpočinkový kout', desc: 'Sedací vak a lehátko po tréninku.' },
       ]
     }
@@ -230,12 +230,14 @@ function renderEquipTab(key) {
     el.className = 'equip-item reveal';
     el.innerHTML = `
       <div class="equip-item-photo">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <rect x="3" y="3" width="18" height="18" rx="3"/>
-          <circle cx="8.5" cy="8.5" r="1.5"/>
-          <path d="M21 15l-5-5L5 21"/>
-        </svg>
-        Foto brzy
+        ${item.image ? `<img src="${item.image}" alt="${item.name}">` : `
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="3"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <path d="M21 15l-5-5L5 21"/>
+          </svg>
+          Foto brzy
+        `}
       </div>
       <div class="equip-item-name">${item.name}</div>
       <div class="equip-item-desc">${item.desc}</div>
