@@ -230,7 +230,8 @@ function renderEquipTab(key) {
         </svg>
         Foto brzy
       </div>
-      <div class="equip-item-name">${item.name}</div><div class="equip-item-desc">${item.desc}</div>`;
+      <div class="equip-item-name">${item.name}</div>
+      <div class="equip-item-desc">${item.desc}</div>`;
     grid.appendChild(el);
   });
   pane.appendChild(grid);
@@ -262,48 +263,30 @@ renderEquipTab('posilo');
 /* ─── TEAM ───────────────────────────────────────────────── */
 const teamGrid = document.getElementById('teamGrid');
 
-const trenerky = DATA.team.slice(0, 2);
-const asistentky = DATA.team.slice(2);
+function renderTeamGroup(members, labelText) {
+  const label = document.createElement('div');
+  label.className = 'team-section-label';
+  label.textContent = labelText;
+  teamGrid.appendChild(label);
 
-const labelTrenerky = document.createElement('div');
-labelTrenerky.className = 'team-section-label';
-labelTrenerky.textContent = 'Trenérky';
-teamGrid.appendChild(labelTrenerky);
+  const subgrid = document.createElement('div');
+  subgrid.className = 'team-subgrid';
+  members.forEach(member => {
+    const card = document.createElement('div');
+    card.className = 'team-card reveal';
+    card.innerHTML = `
+      <div class="team-avatar">${member.initials}</div>
+      <div class="team-name">${member.name}</div>
+      <div class="team-role">${member.role}</div>
+      <div class="team-bio">${member.bio}</div>
+    `;
+    subgrid.appendChild(card);
+  });
+  teamGrid.appendChild(subgrid);
+}
 
-const gridTrenerky = document.createElement('div');
-gridTrenerky.className = 'team-subgrid';
-trenerky.forEach(member => {
-  const card = document.createElement('div');
-  card.className = 'team-card reveal';
-  card.innerHTML = `
-    <div class="team-avatar">${member.initials}</div>
-    <div class="team-name">${member.name}</div>
-    <div class="team-role">${member.role}</div>
-    <div class="team-bio">${member.bio}</div>
-  `;
-  gridTrenerky.appendChild(card);
-});
-teamGrid.appendChild(gridTrenerky);
-
-const labelAsistentky = document.createElement('div');
-labelAsistentky.className = 'team-section-label';
-labelAsistentky.textContent = 'Asistentky';
-teamGrid.appendChild(labelAsistentky);
-
-const gridAsistentky = document.createElement('div');
-gridAsistentky.className = 'team-subgrid';
-asistentky.forEach(member => {
-  const card = document.createElement('div');
-  card.className = 'team-card reveal';
-  card.innerHTML = `
-    <div class="team-avatar">${member.initials}</div>
-    <div class="team-name">${member.name}</div>
-    <div class="team-role">${member.role}</div>
-    <div class="team-bio">${member.bio}</div>
-  `;
-  gridAsistentky.appendChild(card);
-});
-teamGrid.appendChild(gridAsistentky);
+renderTeamGroup(DATA.team.slice(0, 2), 'Trenérky');
+renderTeamGroup(DATA.team.slice(2), 'Asistentky');
 
 /* ─── FAQ ACCORDION ──────────────────────────────────────── */
 const faqList = document.getElementById('faqList');
